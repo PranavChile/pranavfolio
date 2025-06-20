@@ -7,8 +7,6 @@
   -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
   padding: 15rem 0 10rem 0;
-  margin-top: -10rem;
-  margin-bottom: -1px;
   color: $white-color;
 
   @include respond(tab-land) {
@@ -18,10 +16,12 @@
     -webkit-clip-path: none;
   }
 
-  .contact-wrapper {
-    margin-top: 3.2rem;
-    padding: 0 2rem;
-    backface-visibility: hidden;
+ .contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
 
     &__text {
       margin-bottom: 2.5rem;
@@ -36,4 +36,43 @@
       }
     }
   }
+}
+/* Contact Form Styling */
+.contact-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+.contact-form .form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  background-color: #fff;
+  color: #333;
+}
+.cta-btn--resume {
+  background-color: black !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+}
+.contact-form .form-control:focus {
+  border-color: #00bcd4; /* Highlight border on focus */
+  outline: none;
 }

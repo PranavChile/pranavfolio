@@ -1,0 +1,67 @@
+/* Skills Section Styling */
+#skills {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .skill-item {
+    width: 280px;
+    background-color: #fff;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    span {
+      font-size: 18px;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .skill-bar {
+      background: #e0e0e0;
+      border-radius: 25px;
+      height: 18px;
+      overflow: hidden;
+
+      .skill-progress {
+        background: linear-gradient(90deg, #2874f0, #0052cc);
+        height: 100%;
+        border-radius: 25px;
+        color: #fff;
+        font-size: 12px;
+        padding-right: 10px;
+        line-height: 18px;
+        text-align: right;
+        white-space: nowrap;
+        transition: width 1s ease-in-out;
+      }
+    }
+  }
+}

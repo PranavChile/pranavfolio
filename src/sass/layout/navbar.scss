@@ -1,0 +1,122 @@
+.flipkart-navbar {
+  background-color: #EE82EE; /* Flipkart blue */
+  color: white;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+  background-color: #FF00FF; /* darker blue on hover */
+}
+
+/* === DARK MODE === */
+body.dark-mode {
+  background-color: #000 !important;
+  color: #fff;
+
+  nav,
+  header,
+  section,
+  footer {
+    background-color: #000 !important;
+    color: #fff !important;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  .cta-btn,
+  .cta-btn--hero,
+  .project-wrapper__text,
+  .about-wrapper__info,
+  .skill-item,
+  .contact-wrapper,
+  .certificates-wrapper {
+    background-color: #111 !important;
+    color: #fff !important;
+    border-color: #333;
+  }
+
+  a,
+  a:visited,
+  a:active {
+    color: #90caf9 !important;
+  }
+
+  .dark-mode-toggle {
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  .dark-mode-toggle:hover {
+    background-color: #333;
+  }
+
+  .skill-progress {
+    background: linear-gradient(to right, #03a9f4, #0288d1);
+    color: #fff;
+  }
+    #hero {
+    background-color: #000 !important;
+    color: #fff !important;
+  }
+
+  .hero-title {
+    color: #fff !important;
+  }
+
+  .cta-btn--hero {
+    background-color: #222 !important;
+    color: #fff !important;
+    border: 1px solid #555;
+  }
+
+  .cta-btn--hero:hover {
+    background-color: #444 !important;
+  }
+  body.dark-mode #hero {
+  background: #000 !important;
+  background-image: none !important;
+  color: #fff !important;
+}
+
+
+}

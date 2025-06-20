@@ -1,0 +1,116 @@
+#hero {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-bottom: 0px;
+  background: $white-color;
+  font-weight: 400;
+  color: $dark-blue-text;
+  padding: 0rem 5.6rem;
+  margin-bottom: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  transition: background-color 0.5s ease, background-image 0.8s ease-in-out, color 0.5s ease;
+   background-image: url('assets/Home.jpg');
+  background-position: center;
+  background-size: cover;
+
+  @include respond(phone) {
+    padding: 0rem $default-font-size;
+  }
+
+  .hero-title {
+    font-size: 5.6rem;
+    font-weight: 700;
+    margin-bottom: 3.2rem;
+    transition: color 0.4s ease;
+    text-align: left;
+
+    @include respond(tab-land) {
+      font-size: 4rem;
+    }
+    @include respond(tab-port) {
+      font-size: 3.6rem;
+      text-align: center;
+    }
+    @include respond(phone) {
+      font-size: 3.5rem;
+      line-height: 1.5;
+    }
+    @include respond(phone-xs) {
+      font-size: 2.8rem;
+    }
+  }
+
+  .hero-cta {
+    display: flex;
+
+    @include respond(tab-port) {
+      justify-content: center;
+    }
+
+    & a {
+      font-size: 2.4rem;
+
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+body.dark-mode #hero {
+  background-image: url('assets/home-dark.jpg') !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero-title {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-title {
+  font-size: 2rem;
+  text-align: center;
+  transition: transform 0.4s ease, color 0.4s ease;
+  cursor: default;
+}
+
+.hero-title:hover {
+  transform: translateY(-10px) scale(1.05);
+  color: #720059fc;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.text-color-main {
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.text-color-main:hover {
+  color: #ff1c68;
+  transform: scale(1.1);
+}
+
+.hero-tilt {
+  transition: transform 0.2s ease;
+  will-change: transform;
+  perspective: 1000px;
+  display: inline-block;
+}
+
